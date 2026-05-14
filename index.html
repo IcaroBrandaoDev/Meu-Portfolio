@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Ícaro Alves — Desenvolvedor Front-end e Analista de Dados.">
+  <title>Ícaro Alves — Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Cursor glow -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" role="navigation" aria-label="Navegação principal">
+    <div class="nav-inner">
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" aria-label="Apresentação">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-blobs" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-available">
+        <span class="avail-dot" aria-hidden="true"></span>
+
+      </div>
+      <h1 class="hero-name">
+        <span class="glitch" data-text="Ícaro">Ícaro</span><br>
+        <em class="glitch" data-text="Alves.">Alves.</em>
+      </h1>
+      <p class="hero-role" aria-label="Desenvolvedor Front-end & Analista de Dados">
+        <span id="typewriter" aria-hidden="true"></span><span class="tw-cursor" aria-hidden="true"></span>
+      </p>
+      <p class="hero-bio">
+        Estudante de <strong>Sistemas de Informação</strong> e <strong>Ciência da Computação</strong>, construindo experiências web
+        funcionais e extraindo insights de dados para criar soluções que fazem a diferença.
+      </p>
+      <div class="hero-cta">
+        <a href="projetos.html" class="btn btn-blue">Ver Projetos</a>
+        <a href="#sobre" class="btn btn-outline">Sobre mim</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/IcaroBrandaoDev" target="_blank" rel="noopener noreferrer" class="hero-social" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/%C3%ADcaro-alves-726106301/" target="_blank" rel="noopener noreferrer" class="hero-social" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── STATS STRIP ── -->
+  <div class="stats-strip" role="presentation">
+    <div class="wrap">
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-num" data-target="2" data-suffix="+">0+</span>
+          <span class="stat-label">Projetos Concluídos</span>
+        </div>
+        <div class="stat-sep" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="2">0</span>
+          <span class="stat-label">Certificações</span>
+        </div>
+        <div class="stat-sep" aria-hidden="true"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="6" data-suffix="+">0+</span>
+          <span class="stat-label">Tecnologias</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SOBRE ── -->
+  <section class="section" id="sobre" aria-labelledby="sobre-title">
+    <div class="wrap">
+      <div class="about-layout">
+        <div class="about-left reveal">
+          <p class="sec-label">Sobre</p>
+          <h2 class="sec-title" id="sobre-title">Quem sou eu</h2>
+          <p class="about-p">
+            Sou <strong>Ícaro Alves</strong>, estudante de <strong>Sistemas de Informação</strong> e <strong>Ciência da Computação</strong>
+            apaixonado por transformar ideias em produtos digitais. Atuo com foco em
+            <strong>desenvolvimento front-end</strong> e <strong>análise de dados</strong>,
+            unindo lógica e design para criar soluções que realmente funcionam.
+          </p>
+          <p class="about-p">
+            Tenho certificações em <strong>Cloud (AWS)</strong> e <strong>Cibersegurança (Cisco)</strong>,
+            o que me dá uma visão ampla sobre infraestrutura e segurança de sistemas.
+            Busco constantemente evoluir e contribuir em projetos que gerem impacto real.
+          </p>
+          <div class="about-meta">
+            <div class="about-meta-item">
+              <span class="about-meta-icon">📍</span>
+              <span>Brasil</span>
+            </div>
+            <div class="about-meta-item">
+              <span class="about-meta-icon">🎓</span>
+              <span>Sistemas de Informação &amp; Ciência da Computação</span>
+            </div>
+            <div class="about-meta-item">
+              <span class="about-meta-icon">💼</span>
+              <span class="about-status-text">Disponível para trabalhar</span>
+            </div>
+          </div>
+          <div class="about-socials">
+            <a href="https://github.com/IcaroBrandaoDev" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil no GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              github.com/IcaroBrandaoDev
+            </a>
+            <a href="https://www.linkedin.com/in/%C3%ADcaro-alves-726106301/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Perfil no LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              linkedin.com/in/ícaro-alves
+            </a>
+          </div>
+        </div>
+        <div class="about-right reveal" style="transition-delay:.14s" aria-hidden="true">
+          <div class="terminal-card">
+            <div class="terminal-hdr">
+              <div class="t-dots">
+                <span class="t-dot td-red"></span>
+                <span class="t-dot td-yellow"></span>
+                <span class="t-dot td-green"></span>
+              </div>
+              <span class="t-title">icaro@portfolio:~</span>
+            </div>
+            <div class="terminal-body">
+              <p class="t-line"><span class="t-prompt">$</span>&nbsp;<span class="t-cmd">whoAmI</span></p>
+              <p class="t-line t-out">icaro.alves — dev front-end &amp; data analyst</p>
+              <br>
+              <p class="t-line"><span class="t-prompt">$</span>&nbsp;<span class="t-cmd">cat skills.json</span></p>
+              <p class="t-line t-out"><span class="t-key">"frontend"</span>: <span class="t-str">["HTML","CSS","JS"]</span>,</p>
+              <p class="t-line t-out"><span class="t-key">"data"&nbsp;&nbsp;&nbsp;</span>: <span class="t-str">["Python","Análise"]</span>,</p>
+              <p class="t-line t-out"><span class="t-key">"infra"&nbsp;&nbsp;</span>: <span class="t-str">["AWS","Cisco","Git"]</span></p>
+              <br>
+              <p class="t-line"><span class="t-prompt">$</span>&nbsp;<span class="t-cmd">echo $STATUS</span></p>
+              <p class="t-line t-out t-green">🟢 open_to_work=true</p>
+              <br>
+              <p class="t-line"><span class="t-prompt">$</span>&nbsp;<span class="t-blink">█</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+    <div class="wrap">
+      <p class="sec-label reveal">Habilidades Técnicas</p>
+      <h2 class="sec-title reveal" id="skills-title" style="transition-delay:.08s">Tecnologias &amp; Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">
+            <span class="skill-cat-icon">&lt;/&gt;</span>
+            Front-end
+          </h3>
+          <div class="skill-bars">
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-head">
+                <span class="skill-name">HTML &amp; CSS</span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="88%"></div></div>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-head">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-pct">72%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="72%"></div></div>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-head">
+                <span class="skill-name">Design Responsivo</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="80%"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category reveal" style="transition-delay:.1s">
+          <h3 class="skill-cat-title">
+            <span class="skill-cat-icon">&#9635;</span>
+            Dados &amp; Ferramentas
+          </h3>
+          <div class="skill-bars">
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-head">
+                <span class="skill-name">Python</span>
+                <span class="skill-pct">68%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="68%"></div></div>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-head">
+                <span class="skill-name">Análise de Dados</span>
+                <span class="skill-pct">65%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="65%"></div></div>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-bar-head">
+                <span class="skill-name">Git &amp; GitHub</span>
+                <span class="skill-pct">82%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="82%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tech-pills reveal" style="transition-delay:.2s">
+        <span class="tech-pill">HTML5</span>
+        <span class="tech-pill">CSS3</span>
+        <span class="tech-pill">JavaScript</span>
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Git</span>
+        <span class="tech-pill">GitHub</span>
+        <span class="tech-pill">AWS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOFT SKILLS ── -->
+  <section class="section" aria-labelledby="soft-title">
+    <div class="wrap">
+      <p class="sec-label reveal">Competências</p>
+      <h2 class="sec-title reveal" id="soft-title" style="transition-delay:.08s">Soft Skills</h2>
+      <div class="ss-grid" data-stagger>
+        <div class="ss-card reveal">
+          <span class="ss-icon" aria-hidden="true">🧩</span>
+          <h3 class="ss-title">Resolução de Problemas</h3>
+          <p class="ss-desc">Abordagem analítica para identificar e resolver desafios técnicos com eficiência.</p>
+        </div>
+        <div class="ss-card reveal">
+          <span class="ss-icon" aria-hidden="true">⚡</span>
+          <h3 class="ss-title">Aprendizado Rápido</h3>
+          <p class="ss-desc">Facilidade em absorver novas tecnologias e conceitos com agilidade e autonomia.</p>
+        </div>
+        <div class="ss-card reveal">
+          <span class="ss-icon" aria-hidden="true">🎯</span>
+          <h3 class="ss-title">Foco em Resultados</h3>
+          <p class="ss-desc">Comprometimento com a entrega de soluções funcionais dentro do prazo e qualidade.</p>
+        </div>
+        <div class="ss-card reveal">
+          <span class="ss-icon" aria-hidden="true">🔄</span>
+          <h3 class="ss-title">Adaptabilidade</h3>
+          <p class="ss-desc">Capacidade de se ajustar a novos ambientes, tecnologias e desafios inesperados.</p>
+        </div>
+        <div class="ss-card reveal">
+          <span class="ss-icon" aria-hidden="true">💬</span>
+          <h3 class="ss-title">Comunicação</h3>
+          <p class="ss-desc">Clareza na transmissão de ideias técnicas de forma acessível e objetiva.</p>
+        </div>
+        <div class="ss-card reveal">
+          <span class="ss-icon" aria-hidden="true">🤝</span>
+          <h3 class="ss-title">Colaboração</h3>
+          <p class="ss-desc">Trabalho em equipe orientado a objetivos compartilhados e crescimento mútuo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FORMAÇÃO ── -->
+  <section class="section section-alt" id="formacao" aria-labelledby="form-title">
+    <div class="wrap">
+      <p class="sec-label reveal">Trajetória</p>
+      <h2 class="sec-title reveal" id="form-title" style="transition-delay:.08s">Formação</h2>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-dot tl-active"></div>
+          </div>
+          <div class="tl-card">
+            <span class="tl-badge tl-badge-current">Em andamento</span>
+            <span class="tl-period">2025 — Atual</span>
+            <h3 class="tl-title">Bacharelado em Sistemas de Informação - PUC</h3>
+            <p class="tl-sub">Graduação</p>
+            <p class="tl-desc">Formação em desenvolvimento de sistemas, estrutura de dados, banco de dados, redes e arquitetura de software com foco em soluções tecnológicas reais.</p>
+            <div class="tl-tags">
+              <span class="tag">Algoritmos</span>
+              <span class="tag">Banco de Dados</span>
+              <span class="tag">Redes</span>
+              <span class="tag">Eng. de Software</span>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item reveal" style="transition-delay:.14s">
+          <div class="tl-marker">
+            <div class="tl-dot tl-active"></div>
+          </div>
+          <div class="tl-card">
+            <span class="tl-badge tl-badge-current">Em andamento</span>
+            <span class="tl-period">2024 — Atual</span>
+            <h3 class="tl-title">Bacharelado em Ciência da Computação - Una</h3>
+            <p class="tl-sub">Graduação</p>
+            <p class="tl-desc">Formação sólida em fundamentos de computação, algoritmos, estruturas de dados, inteligência artificial e desenvolvimento de software.</p>
+            <div class="tl-tags">
+              <span class="tag">Computação</span>
+              <span class="tag">Algoritmos</span>
+              <span class="tag">IA</span>
+              <span class="tag">Desenvolvimento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CERTIFICADOS ── -->
+  <section class="section" id="certificados" aria-labelledby="certs-title">
+    <div class="wrap">
+      <p class="sec-label reveal">Conquistas</p>
+      <h2 class="sec-title reveal" id="certs-title" style="transition-delay:.08s">Certificados</h2>
+      <div class="certs-grid" data-stagger>
+        <div class="cert-card reveal">
+          <div class="cert-holo" aria-hidden="true"></div>
+          <div class="cert-inner">
+            <img class="cert-badge-img" src="aws-academy-graduate-cloud-foundations-training-bad.jpg" alt="Badge AWS Academy Cloud Foundations" loading="lazy">
+            <div class="cert-info">
+              <p class="cert-issuer">Amazon Web Services</p>
+              <p class="cert-name">AWS Academy Cloud Foundations</p>
+              <p class="cert-sub">Cloud Foundations &mdash; Trained</p>
+            </div>
+          </div>
+          <div class="cert-foot">
+            <span class="cert-verify">&#10003;&nbsp;Verificado</span>
+            <span class="cert-year">2024</span>
+          </div>
+        </div>
+        <div class="cert-card reveal" style="transition-delay:.12s">
+          <div class="cert-holo" aria-hidden="true"></div>
+          <div class="cert-inner">
+            <img class="cert-badge-img" src="cybersecurity-essentials.jpg" alt="Badge Cisco Cybersecurity Essentials" loading="lazy">
+            <div class="cert-info">
+              <p class="cert-issuer">Cisco Networking Academy</p>
+              <p class="cert-name">Cybersecurity Essentials</p>
+              <p class="cert-sub">Cybersecurity Essentials &mdash; Verified</p>
+            </div>
+          </div>
+          <div class="cert-foot">
+            <span class="cert-verify">&#10003;&nbsp;Verificado</span>
+            <span class="cert-year">2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS CTA ── -->
+  <section class="section section-alt" aria-label="Ver Projetos">
+    <div class="wrap">
+      <div class="proj-cta reveal">
+        <div class="proj-cta-bg" aria-hidden="true"></div>
+        <div class="proj-cta-left">
+          <p class="proj-cta-label">Portfólio</p>
+          <h2 class="proj-cta-title">Veja meus projetos<br>em ação<span class="cta-dot">.</span></h2>
+          <p class="proj-cta-sub">Aplicações web construídas com atenção à experiência do usuário e qualidade de código.</p>
+        </div>
+        <a href="projetos.html" class="proj-cta-btn">
+          Ver todos os projetos
+          <svg viewBox="0 0 24 24" aria-hidden="true" stroke="currentColor" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-text">&copy; 2026 &mdash; Feito por Ícaro Alves, do zero ao deploy.</p>
+      <div class="footer-links">
+        <a href="https://github.com/IcaroBrandaoDev" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/%C3%ADcaro-alves-726106301/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
