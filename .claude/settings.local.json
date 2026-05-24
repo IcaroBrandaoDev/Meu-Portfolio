@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Admin\\\\Documents\\\\MeuPortfolio\" -Recurse | Select-Object @{N=\"Path\";E={$_.FullName.Replace\\(\"C:\\\\Users\\\\Admin\\\\Documents\\\\MeuPortfolio\\\\\",\"\"\\)}} , @{N=\"Size\";E={if\\($_.PSIsContainer\\){\"[DIR]\"}else{\"$\\([math]::Round\\($_.Length/1KB,1\\)\\) KB\"}}})",
-      "PowerShell(Start-Process \"c:\\\\Users\\\\Admin\\\\Documents\\\\MeuPortfolio\\\\index.html\")"
-    ]
-  }
-}
